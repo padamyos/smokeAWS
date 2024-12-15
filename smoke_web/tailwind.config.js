@@ -1,6 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import plugin from 'tailwindcss/plugin';
-
 export default {
   content: [
     "./index.html",
@@ -19,7 +17,19 @@ export default {
   ],
   // กำหนด theme ให้กับ daisyUI
   daisyui: {
-    themes: ["light", "dark", "luxury"],
+    themes: [
+      {
+        mytheme: {
+          "primary": "#F9CA10",
+          "secondary": "#e8f7ee",
+          "accent": "#264675",
+          "neutral": "#0b4eb3",
+          "base-100": "#1E2633",
+        },
+      },
+      "light", "dark", "luxury" ,
+      
+    ],
   },
 
 }

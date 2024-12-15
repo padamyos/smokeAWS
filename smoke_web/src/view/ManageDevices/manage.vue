@@ -66,7 +66,7 @@ export default {
     // ฟังก์ชันสำหรับดึงข้อมูลอุปกรณ์ของผู้ใช้
     async fetchDevices() {
       try {
-        const response = await axios.get(`http://localhost:5000/devices/${this.ownerId}`);
+        const response = await axios.get(`http://34.201.40.25:5000/devices/${this.ownerId}`);
         this.devices = response.data;
         console.log(this.ownerId);
       } catch (error) {
@@ -77,7 +77,7 @@ export default {
     // ฟังก์ชันสำหรับเพิ่มอุปกรณ์ใหม่
     async addDevice() {
       try {
-        const response = await axios.post('http://localhost:5000/devices/add', {
+        const response = await axios.post('http://34.201.40.25:5000/devices/add', {
           ...this.newDevice,
           ownerId: this.ownerId,
         });
@@ -91,7 +91,7 @@ export default {
     // ฟังก์ชันสำหรับลบอุปกรณ์
     async deleteDevice(deviceId) {
       try {
-        await axios.delete(`http://localhost:5000/devices/${deviceId}`);
+        await axios.delete(`http://34.201.40.25:5000/devices/${deviceId}`);
         this.devices = this.devices.filter(device => device.deviceId !== deviceId);  // อัพเดทรายการหลังลบ
       } catch (error) {
         console.error('Error deleting device:', error);

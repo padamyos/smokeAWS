@@ -2,7 +2,7 @@
     <div class="navbar  bg-base-100  fixed top-0 left-0 w-full z-20  shadow-md p-5">
 
         <div class="flex-1">
-            <RouterLink to="/" class="btn btn-ghost text-xl ">SMOKEY KIDDETECTOR</RouterLink>
+            <RouterLink to="/" class="btn btn-ghost text-xl  text-primary">SMOKEY KIDDETECTOR</RouterLink>
         </div>
         <div class="flex-none gap-2">
             <div class="form-control pr-10">
@@ -54,6 +54,9 @@
                 </div>
                 <ul tabindex="0"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li>
+                        <RouterLink to="login"> เข้าสู่ระบบ </RouterLink>
+                    </li>
                     <li>
                         <a class="justify-between">
                             Profile

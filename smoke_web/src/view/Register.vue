@@ -52,7 +52,7 @@ export default {
   methods: {
     async registerUser() {
       try {
-        const response = await axios.post('http://localhost:5000/users/register', {
+        const response = await axios.post('http://34.201.40.25:5000/users/register', {
           email: this.email,
           password: this.password,
           role: this.role

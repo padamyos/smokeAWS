@@ -62,7 +62,7 @@ export default {
   methods: {
     async fetchUsers() {
       try {
-        const response = await axios.get('http://localhost:5000/users');
+        const response = await axios.get('http://34.201.40.25:5000/users');
         this.users = response.data;
       } catch (error) {
         console.error('Error fetching users:', error);
@@ -70,7 +70,7 @@ export default {
     },
     async addUser() {
       try {
-        const response = await axios.post('http://localhost:5000/users/register', this.form);
+        const response = await axios.post('http://34.201.40.25:5000/users/register', this.form);
         this.users.push(response.data);
         this.resetForm();
       } catch (error) {
@@ -85,7 +85,7 @@ export default {
     },
     async updateUser() {
       try {
-        const response = await axios.put(`http://localhost:5000/users/${this.editingUserId}`, this.form);
+        const response = await axios.put(`http://34.201.40.25:5000/users/${this.editingUserId}`, this.form);
         const index = this.users.findIndex(user => user._id === this.editingUserId);
         this.$set(this.users, index, response.data);
         this.resetForm();
@@ -95,7 +95,7 @@ export default {
     },
     async deleteUser(userId) {
       try {
-        await axios.delete(`http://localhost:5000/users/${userId}`);
+        await axios.delete(`http://34.201.40.25:5000/users/${userId}`);
         this.users = this.users.filter(user => user._id !== userId);
       } catch (error) {
         console.error('Error deleting user:', error);
